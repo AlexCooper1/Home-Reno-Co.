@@ -1,0 +1,62 @@
+// Main Navigation Styles
+.main-menu {
+    display: flex;
+    
+    ul {
+         @include flatten;
+         list-style: none;
+         display: flex;
+        @at-root .left-links ul {
+            @include mq($tabletLandscape){
+                display: block;
+            }
+         }          
+    }
+
+    a {
+         display: block;
+         line-height: $header-height;
+         text-transform: lowercase;
+         text-align: center;
+         @include plain-link($text-color-medium);
+         @include mq($tabletLandscape){
+            text-align: left;
+        }
+    }
+
+    .left-links {
+        a {
+            font-size: em(20);
+            padding: 0 em(20, 20);
+            #{$link-hover-selector}{
+                background-color: rgba($text-color-light, 0.2);
+            }
+        }
+    }
+
+    .right-links {
+         margin-left: em(20);
+         a {
+            padding: 0 em($header-elements-padding);
+            #{$link-hover-selector}{
+                color: $cta-color;
+            }
+         }
+         
+    }
+
+    @include mq($tabletLandscape){
+         display: block;
+         height: 0;
+         overflow: hidden;
+         width: 100%;
+         transition: height 0.3s ease;
+         background-color: white;
+         .show & {
+             visibility: visible;
+             height: 360px;
+             transition: height 0.3s ease;
+         }
+    }
+
+}

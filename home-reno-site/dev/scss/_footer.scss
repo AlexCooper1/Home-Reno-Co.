@@ -1,0 +1,36 @@
+// Footer Styles
+footer {
+    $font-base: $font-base-content-sections;
+    font-size: em($font-base);
+   
+    .top-footer {
+        padding: {
+            top: em(50, $font-base);
+            bottom: em(34, $font-base);
+        } 
+        .top-link{
+        color: $cta-color;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        text-decoration: none;
+        }
+
+        @include mq(em(570)){
+            padding-bottom: em(50, $font-base);
+        }
+   
+    }
+
+    .bottom-footer {
+        border-top: em(1, $font-base) solid black;
+        background-color: #ebebeb;
+        padding: em(58, $font-base) 0;
+    }
+
+    .top-footer-content,
+    .bottom-footer-content {
+        padding: 0 8vw;
+    }
+
+}
+

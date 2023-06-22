@@ -1,0 +1,56 @@
+.intro {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $text-color-medium;
+    // background-color: #D1CFC8;
+    background-color: #FCF2E2;
+    margin: em(30);
+
+    .img-intro {
+        padding: 2%;
+        @include mq($desktopMedium){
+        width: 40%;
+       }
+        img {
+            object-fit: contain; 
+        }
+    
+    }   
+    
+    .cta-intro {
+        flex: 2;
+        padding: 5%;
+
+        h1 {
+            $font-base: 40;
+            line-height: 1;
+            color: $text-color-dark;
+            font-weight: normal;
+            margin-bottom: em(5, $font-base);
+            font-size: em($font-base);
+            @include mq($tabletLandscape) {
+                $font-base: 30;
+                margin-bottom: em(5, $font-base);
+                font-size: em($font-base);
+            }
+        
+            @include mq($tabletPortrait) {
+                $font-base: 30;
+                margin-bottom: em(5, $font-base);
+                font-size: em($font-base);
+            }
+        }
+
+        p{
+            font-size: em(20);
+            color: $text-color-medium;
+        }
+    }
+
+    @include mq($tabletLandscape){
+       .img-intro {
+        display: none;
+       }
+
+    }
+}

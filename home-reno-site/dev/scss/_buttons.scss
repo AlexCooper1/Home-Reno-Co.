@@ -1,0 +1,31 @@
+// Buttons
+.btn-cta {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    $font-base: 18;
+    border: none;
+    border-radius: 5px;
+    background-color: $cta-color;
+    color: $text-color-light;
+    font-size: em($font-base);
+    padding: em(10, $font-base) em(20, $font-base) em(8, $font-base);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    #{$link-hover-selector}{
+        background-color: black;
+        outline: none;
+    }
+
+    @at-root a.btn-cta {
+        text-decoration: none;
+    }
+
+}
+
+
+
+    
+

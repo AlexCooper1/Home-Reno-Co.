@@ -1,0 +1,69 @@
+.social-and-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .social-links-container {
+        @include mq(em(570)){
+            $font-base: $font-base-content-sections;
+            margin-bottom: em(30, $font-base);
+        }
+    }
+
+    .social-link-list {
+        margin: 3em 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    .social-link {
+        $link-size: 48;
+        $font-base: $font-base-content-sections;
+        font-size: em(26, $font-base);
+        $font-base: 26;
+        display: block;
+        @include plain-link;
+        width: em($link-size, $font-base);
+        height: em($link-size, $font-base);
+        text-align: center;
+        line-height: em($link-size, $font-base);
+        background-color: black;
+        border-radius: 50%;
+        margin-right: em(12, $font-base);
+        @at-root .social-and-email li:last-child .social-link {
+            margin-right: 0;
+        }
+        &.social-link-facebook i {
+            position: relative;
+            right: em(2, $font-base);
+        }
+        #{$link-hover-selector}{
+            background-color: $cta-color;
+        }
+    }
+
+    .email-link {
+        $font-base: $font-base-content-sections;
+        @include plain-link($text-color-medium);
+        display: flex;
+        align-items: center;
+        i {
+            font-size: em(42, $font-base);
+            color: darken($text-color-medium, 30);
+        }
+        .email-link-text {
+            font-size: em(21, $font-base);
+            $font-base: 24;
+            margin-left: em(18, $font-base);
+            text-transform: uppercase;
+            @at-root .social-and-email .email-link:hover .email-link-text, .social-and-email .email-link:focus .email-link-text, .social-and-email .email-link:active .email-link-text {
+                color: $cta-color;
+            }
+        }
+        
+    }
+    @include mq(em(570)) {
+        display: block;
+    }
+}

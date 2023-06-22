@@ -1,0 +1,38 @@
+.our-story {
+    .box {
+        background-color: #FBF2E2;
+        display: flex;
+        justify-content: space-evenly;
+
+        .home-text, .story-text{
+            padding: 3%;
+            align-self: center;
+        }
+
+        img {
+            min-width: 50%;
+        }
+
+        h1 {
+            font-size: em(40);
+            margin-bottom: 5%;
+            line-height: 1;
+            color: $text-color-dark;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: em(20);
+            color: $text-color-medium;
+        }
+
+        @include mq($phoneLandscape){
+            img{
+                display: none;
+            }
+
+            margin-bottom: 2%;
+        }
+    }
+
+}

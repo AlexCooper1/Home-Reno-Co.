@@ -1,0 +1,77 @@
+// Site Colours
+$banner-color: #DB4446;
+
+// MQ Breakpoints
+$tablet-small: 720px;
+$phone-large: 600px;
+$phone-medium: 480px;
+$phone-small: 380px;
+
+// Colors
+$body-bg-color: #303030;
+$wrapper-bg-color: white;
+$cta-color: #FC851E;
+// Text Colors
+$text-color-dark: black;
+$text-color-light: white;
+$text-color-medium: #666;
+
+// Fonts
+$body-font: 'Source Sans Pro', sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
+
+// Layout variables
+$site-width: 1400px;
+$header-height: 60px;
+$padding: 30px;
+$header-elements-padding: 7.5;
+$font-base-content-sections: 18;
+// Grid Values
+$gutter: 2;
+
+// Function to determine column width
+// takes two numerical parameters:
+// $c -> the number of columns in a row
+// $g -> the gutter amount
+@function colWidth($c, $g: 2){
+    @return ((100 - $g * ($c - 1)) / $c) * 1%;
+}
+
+$one-col: 100%;
+$two-col: colWidth(2);
+$three-col: colWidth(3);
+$four-col: colWidth(4);
+$five-col: colWidth(5);
+$six-col: colWidth(6);
+
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{$px/$bc}em; 
+}
+
+// Function to
+// Convert Px to Rems
+@function rem($px, $bc: 16){
+    @return #{$px/$bc}rem; 
+}
+
+// Media Query Breakpoints
+$desktopLarge: em(1320);
+$desktopMedium: em(1250);
+$destopSmall: em(1130);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$tabletPortraitMedium: em(750);
+$tabletPortraitSmall: em(700);
+$phoneLandscape: em(670);
+$phoneLandscapeMedium: em(530);
+$phoneLandscapeSmall: em(470);
+$phonePortraitLarge: em(450);
+$phonePortrait: em(420);
+$phonePortraitSmall: em(390);
+$phonePortraitVerySmall: em(370);
+
+// Utility variables
+$link-hover-selector: '&:hover, &:focus, &:active';

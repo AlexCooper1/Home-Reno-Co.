@@ -1,0 +1,54 @@
+// Header styles
+header {
+    z-index: 1;
+    // header variables
+    $header-bg-color-mb: rgba(255,255,255,1);
+    $header-bg-color: rgba(255,255,255,0.7);
+    position: fixed;
+    width: 100%;
+    background-color: $header-bg-color;
+    color: $text-color-light;
+    padding: {
+        left: em(12);
+        right: em(12);
+
+    }
+
+    .inner-header {
+        @include flex-layout-row;
+        align-items: center;
+        height: $header-height;
+        @include mq($tabletLandscape){
+            height: auto;
+        }
+    }
+
+    .logo {
+        margin-left: em($header-elements-padding);
+       
+        @include mq($tabletLandscape){
+            padding-bottom: 16px;
+            padding-top: 16px;
+        }
+        @include mq(em(340)){
+            width: 190px;
+        }
+
+        a {
+            color: $cta-color;
+            text-decoration: none;
+            font-size: em(25);
+        }   
+    }
+
+    .btn-nav-toggle {
+        display: none;
+    }
+
+    @include mq($tabletLandscape){
+        background-color: $header-bg-color-mb;
+    }
+    
+}
+
+

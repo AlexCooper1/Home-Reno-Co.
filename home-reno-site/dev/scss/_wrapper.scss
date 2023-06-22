@@ -1,0 +1,6 @@
+// Wrapper styles
+.wrapper {
+    max-width: $site-width;
+    @include mc;
+    background-color: $wrapper-bg-color;
+}

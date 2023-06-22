@@ -1,0 +1,136 @@
+.services {
+    
+    .services-heading {
+        font-weight: normal;
+        font-size: em(50);
+        text-align: center;
+        @include mq($phonePortraitLarge) {
+            margin-bottom: 0.5em;
+        }
+    }
+    p {
+        text-align: center;
+        width: 40%;
+        margin:0 auto;
+        padding-bottom: 2%;
+        border-bottom: 1px solid $text-color-medium;
+        color: $text-color-medium;
+        font-size: em(20);
+
+        @include mq($phoneLandscape){
+            width: 70%;
+            border-bottom: none;
+        }
+    }
+}
+
+.services-items {
+    @include flex-layout-row;
+}
+
+.services-item {
+    $font-base: $font-base-content-sections;
+    width: $three-col;
+    padding: em(40, $font-base);
+    text-align: center;
+    @include mq($phoneLandscape){
+        flex-direction: column;
+        
+    }
+    figure {
+        margin: 0;
+        margin-bottom: em(30, $font-base);
+        @include mq($tabletPortraitSmall) {
+            margin-bottom: em(20, $font-base);
+        }
+        @include mq($phonePortraitLarge) {
+            display: flex;
+            flex-direction: column-reverse;
+            flex: 0 0 auto;
+            margin-right: auto;
+            margin-bottom: 0;
+        } 
+    }
+
+    img {
+        display: block;
+        @include mc;
+        margin-bottom: em(10, $font-base);
+        width: 50%;
+    }
+
+    figcaption {
+        font-size: em(30, $font-base);
+        text-transform: uppercase;
+        font-weight: 200;
+        @include mq($desktopLarge){
+            height: 60px;
+        }
+        @include mq($tabletPortraitSmall){
+            height: 84px;
+        }
+        @include mq($phoneLandscape){
+            font-size: em(16, $font-base);
+            height: 50px;
+        }
+        @include mq(em(600)){
+            height: 70px;
+        }
+        @include mq(em(530)){
+            font-size: em(14, $font-base);
+            height: 50px;
+        }
+        @include mq(em(510)){
+            height: 60px;
+        }
+        @include mq(em(490)){
+            font-size: em(13, $font-base);
+            height: 42px;
+        }
+        @include mq(em(480)){
+            height: 56px;
+        }
+        @include mq($phonePortraitLarge) {
+            font-size: em(20, $font-base);
+            height: auto;
+            white-space: nowrap;
+        }
+        @at-root .services-item-02 figcaption {
+            @include mq($phonePortraitLarge) {
+                margin-bottom: 10px;
+            }
+        } 
+        @at-root .services-item-03 figcaption {
+            @include mq($phonePortraitLarge) {
+                margin-bottom: 20px;
+            }
+        } 
+    }
+
+    @include mq($tabletPortrait){
+        padding: em(24, $font-base);
+    }
+    @include mq(em(580)){
+        padding: em(18, $font-base);
+    }
+    @include mq($phonePortraitLarge) {
+        width: $one-col;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+        padding-top: 0;
+        display: flex;
+        &.services-item-01 {
+            padding-top: 0;
+        }
+        &.services-item-03 {
+            padding-bottom: 0;
+        }
+    } 
+    @include mq($phoneLandscape){
+        .btn-cta {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
